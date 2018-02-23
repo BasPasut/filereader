@@ -5,9 +5,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * Append a char from a file to the String.
+ * @author Pasut Kittiprapas
+ *
+ */
 public class AppendStringTask implements Runnable {
 
 	private String filename;
+	private double size;
 
 	public AppendStringTask(String filename) {
 		this.filename = filename;
@@ -41,11 +47,11 @@ public class AppendStringTask implements Runnable {
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
-
+		size = data.length();
 	}
 
 	public String toString() {
-		return String.format("Read file 1-char at a time to String.");
+		return String.format("Read file 1-char at a time to String.\nThis file have %.0f characters.",size);
 		
 	}
 

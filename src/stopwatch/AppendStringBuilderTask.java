@@ -5,9 +5,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * @author Pasut Kittiprapas
+ *
+ */
 public class AppendStringBuilderTask implements Runnable {
 
 	private String filename;
+	private double size;
 
 	public AppendStringBuilderTask(String filename) {
 		this.filename = filename;
@@ -41,9 +47,10 @@ public class AppendStringBuilderTask implements Runnable {
 			} catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
+		size = data.length();
 	}
 
 	public String toString() {
-		return String.format("Read file 1-char at a time to StringBuilder");
+		return String.format("Read file 1-char at a time to StringBuilder.\nThis file have %.0f characters.",size);
 	}
 }
