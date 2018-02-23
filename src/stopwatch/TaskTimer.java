@@ -18,7 +18,7 @@ public class TaskTimer{
 		run.run();
 		System.out.println(run.toString());
 		s.stop();
-		System.out.printf("Elasped time for running task : %.6f ",s.getElapsed());
+		System.out.printf("Elasped time for running task : %.6f sec.\n",s.getElapsed());
 	}
 
 }

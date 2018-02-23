@@ -1,7 +1,6 @@
 package stopwatch;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class FileTasks {
 
@@ -76,7 +75,7 @@ public class FileTasks {
 			br = new BufferedReader(reader);
 			String count;
 			while ((count = br.readLine()) !=null) {
-				data = data + count + '\n';
+				data = data + count + "\n";
 			}
 
 		} catch (IOException e) {
@@ -118,9 +117,19 @@ public class FileTasks {
 
 	public static void main(String[] args) {
 		String alice = "Alice-in-Wonderland.txt";
+		String alice2 = "alice.txt";
+		System.out.println("String");
 		countTimeString(alice);
+		System.out.println("StringBuilder");
 		countTimeStringBuilder(alice);
+		System.out.println("BufferedReader");
 		countTimebyBuffer(alice);
 		System.out.println("---------------------------------");
+		System.out.println("String");
+		countTimeString(alice2);
+		System.out.println("StringBuilder");
+		countTimeStringBuilder(alice2);
+		System.out.println("BufferedReader");
+		countTimebyBuffer(alice2);
 	}
 }
