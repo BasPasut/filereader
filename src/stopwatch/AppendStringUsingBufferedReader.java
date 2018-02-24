@@ -19,6 +19,10 @@ public class AppendStringUsingBufferedReader implements Runnable {
 		this.filename = filename;
 	}
 
+	/**
+	 * Add char from the file that we input to String by using BufferedReader until it reach the last
+	 * char in the file
+	 */
 	@Override
 	public void run() {
 		// create a string for the data to read
@@ -45,6 +49,9 @@ public class AppendStringUsingBufferedReader implements Runnable {
 		size = data.length();
 	}
 	
+	/**
+	 * The detail of the file that we input.
+	 */
 	public String toString(){
 		return String.format("Read file line at a time using BufferedReader.\nThis file have %.0f characters.",size);
 	}

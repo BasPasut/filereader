@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 
 /**
  * Append a char from a file to the String.
+ * 
  * @author Pasut Kittiprapas
  *
  */
@@ -19,6 +20,10 @@ public class AppendStringTask implements Runnable {
 		this.filename = filename;
 	}
 
+	/**
+	 * Add char from the file that we input to String until it reach the last
+	 * char in the file
+	 */
 	@Override
 	public void run() {
 		// create a string for the data to read
@@ -50,9 +55,12 @@ public class AppendStringTask implements Runnable {
 		size = data.length();
 	}
 
+	/**
+	 * The detail of the file that we input.
+	 */
 	public String toString() {
-		return String.format("Read file 1-char at a time to String.\nThis file have %.0f characters.",size);
-		
+		return String.format("Read file 1-char at a time to String.\nThis file have %.0f characters.", size);
+
 	}
 
 }
