@@ -2,7 +2,7 @@ package stopwatch;
 
 public class main {
 
-	//Run TaskTimer
+	// Run TaskTimer
 	public static void main(String[] args) {
 		String filename = "Alice-in-Wonderland.txt";
 		TaskTimer t1 = new TaskTimer();
@@ -15,7 +15,7 @@ public class main {
 		System.out.println("----------------------------------------------");
 		t1.runTask(asubr);
 		System.out.println("----------------------------------------------");
-				
+
 	}
 
 }
